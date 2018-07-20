@@ -6,14 +6,14 @@ namespace Transform
 {
     public static class Transform 
     {
-        public static List<int> Map(this int[] InputArray, Func<int, int> Operation)
+        public static List<int> Map(this int[] input, Func<int, int> arithoperation)
         {
-            List<int> OutputArray = new List<int>();
-            foreach (int i in InputArray)
+            List<int> task = new List<int>();
+            foreach (int i in input)
             {
-                OutputArray.Add(Operation(i));
+                task.Add(arithoperation(i));
             }
-            return OutputArray;
+            return task;
             
         }
     }
