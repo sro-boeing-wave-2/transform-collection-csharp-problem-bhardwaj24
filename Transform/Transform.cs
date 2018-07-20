@@ -6,9 +6,15 @@ namespace Transform
 {
     public static class Transform 
     {
-        public static void Map()
+        public static List<int> Map(this int[] InputArray, Func<int, int> Operation)
         {
-            throw new NotImplementedException();
+            List<int> OutputArray = new List<int>();
+            foreach (int i in InputArray)
+            {
+                OutputArray.Add(Operation(i));
+            }
+            return OutputArray;
+            
         }
     }
 }
